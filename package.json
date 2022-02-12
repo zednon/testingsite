@@ -1,0 +1,25 @@
+{
+  "name": "testingsite",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zednon/testingsite.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zednon/testingsite/issues"
+  },
+  "homepage": "https://github.com/zednon/testingsite#readme",
+  "dependencies": {
+    "express": "^4.17.2",
+    "nodemon": "^2.0.15",
+    "selenium": "^2.20.0",
+    "selenium-webdriver": "^4.1.1"
+  }
+}
