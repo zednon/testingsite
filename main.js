@@ -1,19 +1,16 @@
-const {By,Key,Builder} = require("selenium-webdriver");
+const AxeBuilder = require('@axe-core/webdriverjs');
+const WebDriver = require('selenium-webdriver');
+const assert = require("assert");
 
-async function example() {
-  let driver = await new Builder().forBrowser("firefox").build();
-  try {
-      //browser
-      await driver.get("http://google.com");
-    //navigate to our application 
-    await driver.findElement(By.name("q")).sendKeys(searchString,Key.RETURN);
-//add something
-var title = await driver.getTitle();
-console.log('Title is:',title);
- } finally {
-      //close the browser
-      await driver.quit();
-  }
-}
+const driver = new WebDriver.Builder().forBrowser('firefox').build();
 
-example();
+driver.get('https://dequeuniversity.com/demo/mars/').then(() => {
+  new AxeBuilder(driver).analyze((err, results) => {
+    if (err) {
+     
+      // Handle error somehow
+    }
+    console.log(results);
+  });
+});
+

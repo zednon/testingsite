@@ -17,9 +17,13 @@
   },
   "homepage": "https://github.com/zednon/testingsite#readme",
   "dependencies": {
+    "@axe-core/webdriverjs": "^4.3.2",
     "express": "^4.17.2",
     "nodemon": "^2.0.15",
     "selenium": "^2.20.0",
     "selenium-webdriver": "^4.1.1"
+  },
+  "devDependencies": {
+    "axe-core": "^4.4.1"
   }
 }
